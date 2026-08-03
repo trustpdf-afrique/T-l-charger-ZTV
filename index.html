@@ -20,6 +20,7 @@
       color: #1f1f1f;
       display: flex;
       justify-content: center;
+      padding-bottom: 24px;
     }
 
     .app-container {
@@ -28,11 +29,9 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      position: relative;
-      padding-bottom: 70px;
     }
 
-    /* En-tête */
+    /* En-tête haut */
     .top-bar {
       display: flex;
       align-items: center;
@@ -50,6 +49,8 @@
       border: none;
       cursor: pointer;
       color: #000;
+      display: flex;
+      align-items: center;
     }
 
     /* Informations de l'application */
@@ -137,7 +138,7 @@
 
     .install-btn {
       width: 100%;
-      background-color: #0b2545; /* Couleur sombre du bouton */
+      background-color: #0b2545;
       color: #ffffff;
       border: none;
       padding: 12px;
@@ -155,25 +156,30 @@
       background-color: #051427;
     }
 
-    /* Captures d'écran (Galerie) */
+    /* Emplacements Captures d'écran */
     .screenshots-container {
       display: flex;
       gap: 12px;
       overflow-x: auto;
       padding: 0 16px 24px 16px;
-      scrollbar-width: none; /* Firefox */
+      scrollbar-width: none;
     }
 
     .screenshots-container::-webkit-scrollbar {
-      display: none; /* Chrome/Safari */
+      display: none;
     }
 
-    .screenshot-card {
+    .screenshot-placeholder {
       min-width: 160px;
       height: 280px;
       border-radius: 12px;
-      object-fit: cover;
       background-color: #f1f3f4;
+      border: 2px dashed #dadce0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #80868b;
+      font-size: 13px;
     }
 
     /* Section À propos */
@@ -199,69 +205,14 @@
       font-size: 20px;
       color: #5f6368;
       cursor: pointer;
+      display: flex;
+      align-items: center;
     }
 
     .about-description {
       font-size: 14px;
       color: #474747;
-      line-height: 1.4;
-      margin-bottom: 16px;
-    }
-
-    /* Tags et classements */
-    .tags-container {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      padding: 0 16px;
-    }
-
-    .tag-chip {
-      border: 1px solid #dadce0;
-      border-radius: 8px;
-      padding: 10px 14px;
-      font-size: 13px;
-      color: #3c4043;
-      width: fit-content;
-      font-weight: 500;
-    }
-
-    /* Barre de navigation bas */
-    .bottom-nav {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      max-width: 480px;
-      height: 60px;
-      background-color: #ffffff;
-      border-top: 1px solid #e0e0e0;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    .nav-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #5f6368;
-      text-decoration: none;
-      font-size: 12px;
-      gap: 2px;
-    }
-
-    .nav-item.active {
-      color: #0b2545;
-    }
-
-    .nav-icon-bg {
-      padding: 4px 16px;
-      border-radius: 16px;
-    }
-
-    .nav-item.active .nav-icon-bg {
-      background-color: #c2e7ff;
-      color: #001d35;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -269,7 +220,7 @@
 
   <div class="app-container">
     
-    <!-- En-tête avec boutons d'action -->
+    <!-- En-tête -->
     <div class="top-bar">
       <button class="icon-btn"><span class="material-symbols-outlined">arrow_back</span></button>
       <div class="top-bar-right">
@@ -278,82 +229,57 @@
       </div>
     </div>
 
-    <!-- Info Application -->
+    <!-- Informations sur ZTV -->
     <div class="app-header">
-      <!-- Mettre l'image de votre logo ici -->
-      <img src="https://via.placeholder.com/80" alt="Logo App" class="app-icon">
+      <img src="https://i.postimg.cc/3NmBfMMB/1000280085-1024x1024.png" alt="Logo ZTV" class="app-icon">
       <div class="app-title-container">
-        <h1 class="app-title">Nom de l'App</h1>
-        <span class="app-developer">Éditeur / Nom</span>
+        <h1 class="app-title">ZTV</h1>
+        <span class="app-developer">Zakaria TV</span>
       </div>
     </div>
 
-    <!-- Métriques / Stats -->
+    <!-- Métriques -->
     <div class="stats-container">
       <div class="stat-item">
         <div class="stat-value">4,8 <span class="material-symbols-outlined" style="font-size: 14px;">star</span></div>
-        <div class="stat-label">12 k avis</div>
+        <div class="stat-label">Avis</div>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
         <div class="stat-value"><span class="badge-age">3+</span></div>
-        <div class="stat-label">3 ans et plus</div>
+        <div class="stat-label">Tout public</div>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
         <div class="stat-value"><span class="material-symbols-outlined" style="font-size: 16px;">download</span></div>
-        <div class="stat-label">15 MO</div>
+        <div class="stat-label">Télécharger</div>
       </div>
     </div>
 
-    <!-- Bouton Télécharger -->
+    <!-- Bouton de Téléchargement -->
     <div class="install-container">
-      <!-- Remplacez "mon-application.apk" par le lien direct vers votre fichier -->
-      <a href="mon-application.apk" download class="install-btn">Installer</a>
+      <a href="ztv.apk" download class="install-btn">Installer</a>
     </div>
 
-    <!-- Captures d'écran -->
+    <!-- Emplacements vides pour vos 3 captures d'écran -->
     <div class="screenshots-container">
-      <img src="https://via.placeholder.com/160x280" alt="Capture 1" class="screenshot-card">
-      <img src="https://via.placeholder.com/160x280" alt="Capture 2" class="screenshot-card">
-      <img src="https://via.placeholder.com/160x280" alt="Capture 3" class="screenshot-card">
+      <div class="screenshot-placeholder">Capture 1</div>
+      <div class="screenshot-placeholder">Capture 2</div>
+      <div class="screenshot-placeholder">Capture 3</div>
     </div>
 
-    <!-- Description -->
+    <!-- Description de l'application -->
     <div class="section-about">
       <div class="section-header">
         <h2 class="section-title">À propos de l'appli</h2>
         <button class="arrow-btn"><span class="material-symbols-outlined">arrow_forward</span></button>
       </div>
       <p class="about-description">
-        Description personnalisée de votre application. Présentez rapidement les fonctionnalités principales.
+        ZTV Concours est une application éducative qui aide les élèves à réviser leurs cours grâce à des quiz interactifs.<br><br>
+        Les utilisateurs peuvent créer un compte, participer à des concours adaptés à leur niveau scolaire, consulter leurs résultats et suivre leur classement.<br><br>
+        L'application propose une interface moderne, simple et sécurisée, ainsi qu'un espace administrateur pour gérer les concours, les participants et les résultats.<br><br>
+        Notre objectif est de rendre les révisions plus motivantes, plus amusantes et accessibles à tous les élèves.
       </p>
-    </div>
-
-    <!-- Tags -->
-    <div class="tags-container">
-      <div class="tag-chip">N° 1 du classement "Éducation"</div>
-      <div class="tag-chip">Application éducative</div>
-    </div>
-
-    <!-- Navigation bas (Play Store style) -->
-    <div class="bottom-nav">
-      <a href="#" class="nav-item">
-        <div class="nav-icon-bg"><span class="material-symbols-outlined">sports_esports</span></div>
-        <span>Jeux</span>
-      </a>
-      <a href="#" class="nav-item active">
-        <div class="nav-icon-bg"><span class="material-symbols-outlined">apps</span></div>
-        <span>Applis</span>
-      </a>
-      <a href="#" class="nav-item">
-        <div class="nav-icon-bg"><span class="material-symbols-outlined">search</span></div>
-        <span>Rechercher</span>
-      </a>
-      <a href="#" class="nav-item">
-        <div class="nav-icon-bg"><span class="material-symbols-outlined">account_circle</span></div>
-        <span>Vous</span>
-      </a>
     </div>
 
   </div>
