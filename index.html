@@ -1,212 +1,362 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZakariaTV Concours</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZTV - Téléchargement</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
+    body {
+      background-color: #ffffff;
+      color: #1f1f1f;
+      display: flex;
+      justify-content: center;
+    }
 
-body{
-    background:linear-gradient(135deg,#0D6EFD,#003A8C);
-    color:#333;
-    padding:20px;
-    padding-bottom:120px;
-}
+    .app-container {
+      width: 100%;
+      max-width: 480px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-bottom: 70px;
+    }
 
-.container{
-    max-width:750px;
-    margin:auto;
-    background:#ffffff;
-    border-radius:25px;
-    padding:30px;
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
-}
+    /* En-tête */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+    }
 
-.logo{
-    width:120px;
-    height:120px;
-    border-radius:25px;
-    object-fit:cover;
-    display:block;
-    margin:auto;
-    margin-bottom:20px;
-    border:4px solid #0D6EFD;
-}
+    .top-bar-right {
+      display: flex;
+      gap: 16px;
+    }
 
-h1{
-    text-align:center;
-    color:#0D6EFD;
-    font-size:38px;
-    margin-bottom:10px;
-}
+    .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #000;
+    }
 
-.slogan{
-    text-align:center;
-    color:#555;
-    font-size:22px;
-    font-weight:bold;
-    margin-bottom:30px;
-}
+    /* Informations de l'application */
+    .app-header {
+      display: flex;
+      gap: 20px;
+      padding: 0 16px 16px 16px;
+      align-items: center;
+    }
 
-.description{
-    font-size:18px;
-    line-height:1.8;
-    color:#444;
-    text-align:justify;
-}
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-.section-title{
-    margin-top:35px;
-    margin-bottom:15px;
-    color:#0D6EFD;
-    font-size:28px;
-    font-weight:bold;
-}
+    .app-title-container {
+      display: flex;
+      flex-direction: column;
+    }
 
-.features{
-    list-style:none;
-}
+    .app-title {
+      font-size: 24px;
+      font-weight: 500;
+      color: #1f1f1f;
+    }
 
-.features li{
-    font-size:18px;
-    padding:8px 0;
-}
+    .app-developer {
+      font-size: 14px;
+      color: #01875f;
+      font-weight: 500;
+      margin-top: 2px;
+    }
 
-.mission{
-    font-size:18px;
-    line-height:1.8;
-    color:#444;
-    text-align:justify;
-}
+    /* Statistiques */
+    .stats-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+    }
 
-.footer{
-    text-align:center;
-    color:#777;
-    margin-top:40px;
-    font-size:15px;
-}
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+    }
 
-/* Bouton fixe */
+    .stat-value {
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
 
-.download-box{
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:20px;
-    display:flex;
-    justify-content:center;
-    z-index:9999;
-}
+    .stat-label {
+      font-size: 11px;
+      color: #5f6368;
+      margin-top: 4px;
+    }
 
-.download-btn{
-    background:linear-gradient(135deg,#0D6EFD,#0056D6);
-    color:white;
-    text-decoration:none;
-    padding:18px 40px;
-    border-radius:60px;
-    font-size:24px;
-    font-weight:bold;
-    border:4px solid white;
-    box-shadow:0 12px 30px rgba(0,0,0,.35);
-    animation:pulse 1.5s infinite;
-}
+    .stat-divider {
+      width: 1px;
+      height: 24px;
+      background-color: #e0e0e0;
+    }
 
-@keyframes pulse{
-0%{
-transform:scale(1);
-box-shadow:0 0 0 0 rgba(13,110,253,.6);
-}
-50%{
-transform:scale(1.06);
-}
-100%{
-transform:scale(1);
-box-shadow:0 0 0 20px rgba(13,110,253,0);
-}
-}
-</style>
+    .badge-age {
+      border: 1px solid #1f1f1f;
+      padding: 0 3px;
+      border-radius: 2px;
+      font-size: 11px;
+    }
 
+    /* Bouton d'installation */
+    .install-container {
+      padding: 0 16px 20px 16px;
+    }
+
+    .install-btn {
+      width: 100%;
+      background-color: #0b2545; /* Couleur sombre du bouton */
+      color: #ffffff;
+      border: none;
+      padding: 12px;
+      border-radius: 24px;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .install-btn:active {
+      background-color: #051427;
+    }
+
+    /* Captures d'écran (Galerie) */
+    .screenshots-container {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 0 16px 24px 16px;
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .screenshots-container::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+
+    .screenshot-card {
+      min-width: 160px;
+      height: 280px;
+      border-radius: 12px;
+      object-fit: cover;
+      background-color: #f1f3f4;
+    }
+
+    /* Section À propos */
+    .section-about {
+      padding: 0 16px 16px 16px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .arrow-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: #5f6368;
+      cursor: pointer;
+    }
+
+    .about-description {
+      font-size: 14px;
+      color: #474747;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    /* Tags et classements */
+    .tags-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 0 16px;
+    }
+
+    .tag-chip {
+      border: 1px solid #dadce0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #3c4043;
+      width: fit-content;
+      font-weight: 500;
+    }
+
+    /* Barre de navigation bas */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      max-width: 480px;
+      height: 60px;
+      background-color: #ffffff;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #5f6368;
+      text-decoration: none;
+      font-size: 12px;
+      gap: 2px;
+    }
+
+    .nav-item.active {
+      color: #0b2545;
+    }
+
+    .nav-icon-bg {
+      padding: 4px 16px;
+      border-radius: 16px;
+    }
+
+    .nav-item.active .nav-icon-bg {
+      background-color: #c2e7ff;
+      color: #001d35;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <div class="app-container">
+    
+    <!-- En-tête avec boutons d'action -->
+    <div class="top-bar">
+      <button class="icon-btn"><span class="material-symbols-outlined">arrow_back</span></button>
+      <div class="top-bar-right">
+        <button class="icon-btn"><span class="material-symbols-outlined">bookmark_add</span></button>
+        <button class="icon-btn"><span class="material-symbols-outlined">more_vert</span></button>
+      </div>
+    </div>
 
-<!-- Remplacez le lien ci-dessous par votre logo -->
-<img src="VOTRE_LOGO.png" class="logo">
+    <!-- Info Application -->
+    <div class="app-header">
+      <!-- Mettre l'image de votre logo ici -->
+      <img src="https://via.placeholder.com/80" alt="Logo App" class="app-icon">
+      <div class="app-title-container">
+        <h1 class="app-title">Nom de l'App</h1>
+        <span class="app-developer">Éditeur / Nom</span>
+      </div>
+    </div>
 
-<h1>📚 ZakariaTV Concours</h1>
+    <!-- Métriques / Stats -->
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-value">4,8 <span class="material-symbols-outlined" style="font-size: 14px;">star</span></div>
+        <div class="stat-label">12 k avis</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-value"><span class="badge-age">3+</span></div>
+        <div class="stat-label">3 ans et plus</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-value"><span class="material-symbols-outlined" style="font-size: 16px;">download</span></div>
+        <div class="stat-label">15 MO</div>
+      </div>
+    </div>
 
-<p class="slogan">
-Révisez. Progressez. Gagnez.
-</p>
+    <!-- Bouton Télécharger -->
+    <div class="install-container">
+      <!-- Remplacez "mon-application.apk" par le lien direct vers votre fichier -->
+      <a href="mon-application.apk" download class="install-btn">Installer</a>
+    </div>
 
-<div class="description">
+    <!-- Captures d'écran -->
+    <div class="screenshots-container">
+      <img src="https://via.placeholder.com/160x280" alt="Capture 1" class="screenshot-card">
+      <img src="https://via.placeholder.com/160x280" alt="Capture 2" class="screenshot-card">
+      <img src="https://via.placeholder.com/160x280" alt="Capture 3" class="screenshot-card">
+    </div>
 
-ZakariaTV Concours est une application éducative moderne conçue pour aider les élèves à réviser efficacement grâce à des quiz interactifs et des concours passionnants.
+    <!-- Description -->
+    <div class="section-about">
+      <div class="section-header">
+        <h2 class="section-title">À propos de l'appli</h2>
+        <button class="arrow-btn"><span class="material-symbols-outlined">arrow_forward</span></button>
+      </div>
+      <p class="about-description">
+        Description personnalisée de votre application. Présentez rapidement les fonctionnalités principales.
+      </p>
+    </div>
 
-<br><br>
+    <!-- Tags -->
+    <div class="tags-container">
+      <div class="tag-chip">N° 1 du classement "Éducation"</div>
+      <div class="tag-chip">Application éducative</div>
+    </div>
 
-Avec une interface simple, rapide et sécurisée, les élèves peuvent apprendre tout en suivant leurs progrès.
+    <!-- Navigation bas (Play Store style) -->
+    <div class="bottom-nav">
+      <a href="#" class="nav-item">
+        <div class="nav-icon-bg"><span class="material-symbols-outlined">sports_esports</span></div>
+        <span>Jeux</span>
+      </a>
+      <a href="#" class="nav-item active">
+        <div class="nav-icon-bg"><span class="material-symbols-outlined">apps</span></div>
+        <span>Applis</span>
+      </a>
+      <a href="#" class="nav-item">
+        <div class="nav-icon-bg"><span class="material-symbols-outlined">search</span></div>
+        <span>Rechercher</span>
+      </a>
+      <a href="#" class="nav-item">
+        <div class="nav-icon-bg"><span class="material-symbols-outlined">account_circle</span></div>
+        <span>Vous</span>
+      </a>
+    </div>
 
-</div>
-
-<div class="section-title">
-✨ Fonctionnalités
-</div>
-
-<ul class="features">
-<li>✅ Création de compte rapide</li>
-<li>✅ Participation à des concours selon le niveau scolaire</li>
-<li>✅ Consultation des résultats après chaque concours</li>
-<li>✅ Classement des meilleurs participants</li>
-<li>✅ Concours gratuits et concours réservés aux abonnés</li>
-<li>✅ Interface moderne, fluide et sécurisée</li>
-<li>✅ Gestion complète des concours par l'administrateur</li>
-<li>✅ Suivi des statistiques et des performances</li>
-</ul>
-
-<div class="section-title">
-🎯 Notre mission
-</div>
-
-<p class="mission">
-
-Notre objectif est de rendre les révisions plus motivantes, plus amusantes et accessibles à tous les élèves afin de favoriser leur réussite scolaire.
-
-</p>
-
-<div class="footer">
-
-Version Android • Installation gratuite
-
-<br><br>
-
-© 2026 ZakariaTV Concours - Tous droits réservés.
-
-</div>
-
-</div>
-
-<!-- GRAND BOUTON FIXE EN BAS -->
-
-<div class="download-box">
-
-<a href="LIEN_DE_TELECHARGEMENT_APK"
-class="download-btn">
-
-📥 Télécharger l'application
-
-</a>
-
-</div>
+  </div>
 
 </body>
-  </html>
+</html>
