@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZTV - Téléchargement</title>
+
+  <title>ZTV Moyenne - Téléchargement</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
   <style>
     * {
       box-sizing: border-box;
@@ -31,7 +36,10 @@
       flex-direction: column;
     }
 
-    /* En-tête haut */
+    /* =========================
+       BARRE DU HAUT
+    ========================= */
+
     .top-bar {
       display: flex;
       align-items: center;
@@ -53,7 +61,10 @@
       align-items: center;
     }
 
-    /* Informations de l'application */
+    /* =========================
+       INFORMATIONS APPLICATION
+    ========================= */
+
     .app-header {
       display: flex;
       gap: 20px;
@@ -61,12 +72,18 @@
       align-items: center;
     }
 
+    /*
+      REMPLACE "TON_LOGO_ICI.png"
+      PAR LE LIEN DE TON LOGO
+    */
+
     .app-icon {
       width: 80px;
       height: 80px;
       border-radius: 20%;
       object-fit: cover;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background-color: #f1f3f4;
     }
 
     .app-title-container {
@@ -78,16 +95,20 @@
       font-size: 24px;
       font-weight: 500;
       color: #1f1f1f;
+      line-height: 1.15;
     }
 
     .app-developer {
       font-size: 14px;
       color: #01875f;
       font-weight: 500;
-      margin-top: 2px;
+      margin-top: 5px;
     }
 
-    /* Statistiques */
+    /* =========================
+       STATISTIQUES
+    ========================= */
+
     .stats-container {
       display: flex;
       justify-content: space-around;
@@ -131,7 +152,10 @@
       font-size: 11px;
     }
 
-    /* Bouton d'installation */
+    /* =========================
+       BOUTON INSTALLATION
+    ========================= */
+
     .install-container {
       padding: 0 16px 20px 16px;
     }
@@ -149,14 +173,22 @@
       text-decoration: none;
       display: block;
       cursor: pointer;
-      transition: background-color 0.2s;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .install-btn:hover {
+      background-color: #123b68;
     }
 
     .install-btn:active {
       background-color: #051427;
+      transform: scale(0.98);
     }
 
-    /* Emplacements Captures d'écran */
+    /* =========================
+       CAPTURES D'ÉCRAN
+    ========================= */
+
     .screenshots-container {
       display: flex;
       gap: 12px;
@@ -170,15 +202,18 @@
     }
 
     .screenshot-placeholder {
-  min-width: 160px;
-  height: 280px;
-  border-radius: 12px;
-  object-fit: cover;
-  background-color: #f1f3f4;
-  border: 1px solid #dadce0;
+      min-width: 160px;
+      height: 280px;
+      border-radius: 12px;
+      object-fit: cover;
+      background-color: #f1f3f4;
+      border: 1px solid #dadce0;
     }
 
-    /* Section À propos */
+    /* =========================
+       SECTION À PROPOS
+    ========================= */
+
     .section-about {
       padding: 0 16px 16px 16px;
     }
@@ -187,7 +222,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .section-title {
@@ -208,73 +243,380 @@
     .about-description {
       font-size: 14px;
       color: #474747;
-      line-height: 1.5;
+      line-height: 1.55;
+    }
+
+    /* =========================
+       INFORMATIONS SUPPLÉMENTAIRES
+    ========================= */
+
+    .features {
+      padding: 0 16px 20px 16px;
+    }
+
+    .feature {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-top: 15px;
+    }
+
+    .feature-icon {
+      font-size: 23px;
+      color: #0b2545;
+    }
+
+    .feature-text {
+      font-size: 14px;
+      color: #474747;
+      line-height: 1.45;
+    }
+
+    .feature-text strong {
+      color: #1f1f1f;
     }
   </style>
 </head>
+
 <body>
 
   <div class="app-container">
-    
-    <!-- En-tête -->
+
+    <!-- =========================
+         BARRE DU HAUT
+    ========================= -->
+
     <div class="top-bar">
-      <button class="icon-btn"><span class="material-symbols-outlined">arrow_back</span></button>
+
+      <button class="icon-btn" onclick="history.back()">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </button>
+
       <div class="top-bar-right">
-        <button class="icon-btn"><span class="material-symbols-outlined">bookmark_add</span></button>
-        <button class="icon-btn"><span class="material-symbols-outlined">more_vert</span></button>
+
+        <button class="icon-btn">
+          <span class="material-symbols-outlined">bookmark_add</span>
+        </button>
+
+        <button class="icon-btn">
+          <span class="material-symbols-outlined">more_vert</span>
+        </button>
+
       </div>
+
     </div>
 
-    <!-- Informations sur ZTV -->
+
+    <!-- =========================
+         INFORMATIONS APPLICATION
+    ========================= -->
+
     <div class="app-header">
-      <img src="https://i.postimg.cc/3NmBfMMB/1000280085-1024x1024.png" alt="Logo ZTV" class="app-icon">
+
+      <!--
+        REMPLACE L'URL CI-DESSOUS PAR TON LOGO
+      -->
+
+      <img
+        src="TON_LOGO_ICI.png"
+        alt="Logo ZTV Moyenne"
+        class="app-icon"
+      >
+
       <div class="app-title-container">
-        <h1 class="app-title">ZTV - Plateforme Educative</h1>
-        <span class="app-developer">Zakaria TV</span>
+
+        <h1 class="app-title">
+          ZTV Moyenne
+        </h1>
+
+        <span class="app-developer">
+          ZTV (Zakaria Niampa)
+        </span>
+
       </div>
+
     </div>
 
-    <!-- Métriques -->
+
+    <!-- =========================
+         STATISTIQUES
+    ========================= -->
+
     <div class="stats-container">
+
       <div class="stat-item">
-        <div class="stat-value">4,8 <span class="material-symbols-outlined" style="font-size: 14px;">star</span></div>
-        <div class="stat-label">Avis</div>
+
+        <div class="stat-value">
+          4,8
+          <span
+            class="material-symbols-outlined"
+            style="font-size:14px;"
+          >
+            star
+          </span>
+        </div>
+
+        <div class="stat-label">
+          Avis
+        </div>
+
       </div>
+
+
       <div class="stat-divider"></div>
+
+
       <div class="stat-item">
-        <div class="stat-value"><span class="badge-age">3+</span></div>
-        <div class="stat-label">Tout public</div>
+
+        <div class="stat-value">
+          <span class="badge-age">
+            3+
+          </span>
+        </div>
+
+        <div class="stat-label">
+          Tout public
+        </div>
+
       </div>
+
+
       <div class="stat-divider"></div>
+
+
       <div class="stat-item">
-        <div class="stat-value"><span class="material-symbols-outlined" style="font-size: 16px;">download</span></div>
-        <div class="stat-label">Télécharger</div>
+
+        <div class="stat-value">
+
+          <span
+            class="material-symbols-outlined"
+            style="font-size:16px;"
+          >
+            download
+          </span>
+
+        </div>
+
+        <div class="stat-label">
+          Télécharger
+        </div>
+
       </div>
+
     </div>
 
-    <!-- Bouton de Téléchargement -->
+
+    <!-- =========================
+         BOUTON TÉLÉCHARGEMENT
+    ========================= -->
+
     <div class="install-container">
-      <a href="6a6fe3ea571c68bc3294d3a0.apk" download class="install-btn">Installer</a>
+
+      <!--
+        REMPLACE "ZTV-Moyenne.apk"
+        PAR LE NOM EXACT DE TON FICHIER APK
+      -->
+
+      <a
+        href="ZTV-Moyenne.apk"
+        download
+        class="install-btn"
+      >
+        Installer
+      </a>
+
     </div>
 
-    <!-- Captures d'écran -->
-<div class="screenshots-container">
-  <img src="https://i.postimg.cc/J7J4qqjG/Screenshot-20260803-153443.jpg" alt="Capture 1" class="screenshot-placeholder">
-  <img src="https://i.postimg.cc/XYNjn6mQ/Screenshot-20260803-154838.jpg" alt="Capture 2" class="screenshot-placeholder">
-  <img src="https://i.postimg.cc/d0pwRk1y/Screenshot-20260803-155424.jpg" alt="Capture 3" class="screenshot-placeholder">
+
+    <!-- =========================
+         CAPTURES D'ÉCRAN
+         TU METS TES IMAGES ICI
+    ========================= -->
+
+ <div class="screenshots-container">
+
+  <!-- Image 1 -->
+  <img
+    src="CAPTURE_1_ICI.jpg"
+    alt="Capture d'écran ZTV Moyenne 1"
+    class="screenshot-placeholder"
+  >
+
+  <!-- Image 2 -->
+  <img
+    src="CAPTURE_2_ICI.jpg"
+    alt="Capture d'écran ZTV Moyenne 2"
+    class="screenshot-placeholder"
+  >
+
+  <!-- Image 3 -->
+  <img
+    src="CAPTURE_3_ICI.jpg"
+    alt="Capture d'écran ZTV Moyenne 3"
+    class="screenshot-placeholder"
+  >
+
+  <!-- Image 4 -->
+  <img
+    src="CAPTURE_4_ICI.jpg"
+    alt="Capture d'écran ZTV Moyenne 4"
+    class="screenshot-placeholder"
+  >
+
+  <!-- Image 5 -->
+  <img
+    src="CAPTURE_5_ICI.jpg"
+    alt="Capture d'écran ZTV Moyenne 5"
+    class="screenshot-placeholder"
+  >
+
 </div>
-    <!-- Description de l'application -->
+
+
+    <!-- =========================
+         À PROPOS
+    ========================= -->
+
     <div class="section-about">
+
       <div class="section-header">
-        <h2 class="section-title">À propos de l'appli</h2>
-        <button class="arrow-btn"><span class="material-symbols-outlined">arrow_forward</span></button>
+
+        <h2 class="section-title">
+          À propos de l'appli
+        </h2>
+
+        <button class="arrow-btn">
+          <span class="material-symbols-outlined">
+            arrow_forward
+          </span>
+        </button>
+
       </div>
+
+
       <p class="about-description">
-        ZTV Concours est une application éducative qui aide les élèves à réviser leurs cours grâce à des quiz interactifs.<br><br>
-        Les utilisateurs peuvent créer un compte, participer à des concours adaptés à leur niveau scolaire, consulter leurs résultats et suivre leur classement.<br><br>
-        L'application propose une interface moderne, simple et sécurisée, ainsi qu'un espace administrateur pour gérer les concours, les participants et les résultats.<br><br>
-        Notre objectif est de rendre les révisions plus motivantes, plus amusantes et accessibles à tous les élèves.
+
+        <strong>ZTV Moyenne</strong> est une application éducative conçue pour aider les élèves à calculer, suivre et améliorer leurs résultats scolaires.
+
+        <br><br>
+
+        Elle permet de calculer rapidement les moyennes du
+        <strong>1er, 2e et 3e trimestre</strong>, puis d'obtenir automatiquement la moyenne générale annuelle, la mention et la décision de passage en classe supérieure.
+
+        <br><br>
+
+        Pour les élèves de <strong>3e</strong>, ZTV Moyenne propose également un calculateur d'orientation spécial permettant d'estimer la moyenne d'orientation en tenant compte des résultats scolaires et des notes du BEPC.
+
+        <br><br>
+
+        Les élèves peuvent également suivre leur progression tout au long de l'année et vérifier leur éligibilité au
+        <strong>Tableau d'Honneur ZTV Excellence</strong>.
+
+        <br><br>
+
+        Avec son espace personnel sécurisé, chaque élève peut conserver ses informations et suivre ses performances scolaires.
+
+        <br><br>
+
+        <strong>
+          ZTV Moyenne — Ton assistant intelligent pour calculer, suivre et réussir ton année scolaire !
+        </strong>
+
       </p>
+
+    </div>
+
+
+    <!-- =========================
+         FONCTIONNALITÉS
+    ========================= -->
+
+    <div class="features">
+
+      <div class="feature">
+
+        <span class="material-symbols-outlined feature-icon">
+          calculate
+        </span>
+
+        <div class="feature-text">
+
+          <strong>Calcul instantané des moyennes</strong><br>
+
+          Calcule facilement tes moyennes trimestrielles et ta moyenne annuelle.
+
+        </div>
+
+      </div>
+
+
+      <div class="feature">
+
+        <span class="material-symbols-outlined feature-icon">
+          school
+        </span>
+
+        <div class="feature-text">
+
+          <strong>Orientation spéciale 3e</strong><br>
+
+          Calcule ta moyenne d'orientation et prépare ton parcours après le BEPC.
+
+        </div>
+
+      </div>
+
+
+      <div class="feature">
+
+        <span class="material-symbols-outlined feature-icon">
+          emoji_events
+        </span>
+
+        <div class="feature-text">
+
+          <strong>Tableau d'Honneur ZTV Excellence</strong><br>
+
+          Vérifie ton éligibilité à partir d'une moyenne annuelle de 13/20.
+
+        </div>
+
+      </div>
+
+
+      <div class="feature">
+
+        <span class="material-symbols-outlined feature-icon">
+          trending_up
+        </span>
+
+        <div class="feature-text">
+
+          <strong>Suivi de progression</strong><br>
+
+          Suis tes performances et découvre des conseils pour progresser.
+
+        </div>
+
+      </div>
+
+
+      <div class="feature">
+
+        <span class="material-symbols-outlined feature-icon">
+          account_circle
+        </span>
+
+        <div class="feature-text">
+
+          <strong>Espace personnel</strong><br>
+
+          Retrouve tes informations scolaires dans ton compte personnel sécurisé.
+
+        </div>
+
+      </div>
+
     </div>
 
   </div>
