@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ZTV Moyenne - Télécharger gratuitement</title>
+  <title>ZTV Moyenne - Télécharger l'application</title>
 
   <meta
     name="description"
-    content="Téléchargez gratuitement ZTV Moyenne, une application éducative Android conçue pour calculer et suivre les résultats scolaires, même sans connexion Internet."
+    content="Téléchargez gratuitement ZTV Moyenne, une application éducative Android conçue pour calculer et suivre les résultats scolaires."
   >
 
   <meta name="theme-color" content="#0b2545">
@@ -57,6 +57,7 @@
       flex-direction: column;
     }
 
+
     /* =========================
        BARRE DU HAUT
     ========================= */
@@ -65,12 +66,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 15px 16px;
+      padding: 12px 14px;
     }
 
     .top-bar-right {
       display: flex;
-      gap: 8px;
+      gap: 5px;
     }
 
     .icon-btn {
@@ -93,23 +94,23 @@
 
 
     /* =========================
-       INFORMATIONS APPLICATION
+       APPLICATION
     ========================= */
 
     .app-header {
       display: flex;
-      gap: 18px;
-      padding: 5px 16px 18px;
+      gap: 17px;
+      padding: 4px 16px 15px;
       align-items: center;
     }
 
     .app-icon {
-      width: 82px;
-      height: 82px;
+      width: 86px;
+      height: 86px;
       flex-shrink: 0;
       border-radius: 20%;
       object-fit: cover;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.14);
       background: #f1f3f4;
     }
 
@@ -119,8 +120,8 @@
     }
 
     .app-title {
-      font-size: 25px;
-      font-weight: 500;
+      font-size: 26px;
+      font-weight: 700;
       color: #1f1f1f;
       line-height: 1.15;
     }
@@ -140,30 +141,91 @@
 
 
     /* =========================
-       BADGES DE CONFIANCE
+       BOUTON PRINCIPAL RAPIDE
+    ========================= */
+
+    .quick-download {
+      padding: 0 16px 15px;
+    }
+
+    .quick-download-btn {
+      width: 100%;
+      min-height: 58px;
+      background: #0b2545;
+      color: #ffffff;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 5px 14px rgba(11,37,69,0.23);
+      transition: transform 0.15s, background 0.2s;
+    }
+
+    .quick-download-btn:hover {
+      background: #123b68;
+    }
+
+    .quick-download-btn:active {
+      background: #051427;
+      transform: scale(0.97);
+    }
+
+    .quick-download-btn .material-symbols-outlined {
+      font-size: 24px;
+    }
+
+    .quick-download-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 9px;
+      color: #5f6368;
+      font-size: 11px;
+    }
+
+    .quick-download-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .quick-download-info .material-symbols-outlined {
+      font-size: 15px;
+      color: #01875f;
+    }
+
+
+    /* =========================
+       BADGES
     ========================= */
 
     .trust-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      padding: 0 16px 17px;
+      gap: 7px;
+      padding: 0 16px 15px;
     }
 
     .trust-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 7px 10px;
+      gap: 5px;
+      padding: 7px 9px;
       border-radius: 20px;
       background: #f3f7f5;
       color: #176b4d;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
     }
 
     .trust-badge .material-symbols-outlined {
-      font-size: 17px;
+      font-size: 16px;
     }
 
 
@@ -175,7 +237,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 12px 16px 18px;
+      padding: 8px 16px 18px;
     }
 
     .stat-item {
@@ -215,23 +277,23 @@
 
 
     /* =========================
-       GRANDE SURFACE TÉLÉCHARGEMENT
+       CARTE INFORMATIONS
     ========================= */
 
     .download-card {
-      margin: 0 16px 22px;
-      padding: 20px;
+      margin: 0 16px 24px;
+      padding: 19px;
       border: 1px solid #e1e5ea;
       border-radius: 18px;
       background: #ffffff;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
     }
 
     .download-card-header {
       display: flex;
       align-items: center;
-      gap: 13px;
-      margin-bottom: 17px;
+      gap: 12px;
+      margin-bottom: 15px;
     }
 
     .download-logo {
@@ -255,7 +317,7 @@
 
 
     /* =========================
-       MESSAGE GRATUIT + HORS LIGNE
+       GRATUIT / HORS CONNEXION
     ========================= */
 
     .free-offline-box {
@@ -344,58 +406,11 @@
 
 
     /* =========================
-       BOUTON TÉLÉCHARGEMENT
-    ========================= */
-
-    .install-btn {
-      width: 100%;
-      min-height: 55px;
-      background: #0b2545;
-      color: #ffffff;
-      border: none;
-      padding: 14px 18px;
-      border-radius: 28px;
-      font-size: 16px;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(11,37,69,0.22);
-      transition: background 0.2s, transform 0.1s;
-    }
-
-    .install-btn:hover {
-      background: #123b68;
-    }
-
-    .install-btn:active {
-      background: #051427;
-      transform: scale(0.98);
-    }
-
-    .install-btn .material-symbols-outlined {
-      font-size: 22px;
-    }
-
-    .download-status {
-      display: none;
-      text-align: center;
-      margin-top: 10px;
-      font-size: 12px;
-      color: #5f6368;
-    }
-
-
-    /* =========================
        INSTALLATION
     ========================= */
 
     .install-info {
-      margin-top: 18px;
+      margin-top: 2px;
       padding: 14px;
       border-radius: 12px;
       background: #f7f8fa;
@@ -429,7 +444,7 @@
 
 
     /* =========================
-       CAPTURES D'ÉCRAN
+       CAPTURES
     ========================= */
 
     .section-label {
@@ -442,7 +457,7 @@
       display: flex;
       gap: 12px;
       overflow-x: auto;
-      padding: 0 16px 25px;
+      padding: 0 16px 26px;
       scrollbar-width: none;
     }
 
@@ -466,7 +481,7 @@
     ========================= */
 
     .section-about {
-      padding: 0 16px 22px;
+      padding: 0 16px 24px;
     }
 
     .section-header {
@@ -510,7 +525,7 @@
     ========================= */
 
     .features {
-      padding: 0 16px 25px;
+      padding: 0 16px 28px;
     }
 
     .features-title {
@@ -557,8 +572,16 @@
 
 
     /* =========================
-       ANIMATION
+       MESSAGE TÉLÉCHARGEMENT
     ========================= */
+
+    .download-status {
+      display: none;
+      text-align: center;
+      margin-top: 9px;
+      font-size: 12px;
+      color: #5f6368;
+    }
 
     .loading-icon {
       display: none;
@@ -566,13 +589,37 @@
     }
 
     @keyframes rotation {
-
       from {
         transform: rotate(0deg);
       }
 
       to {
         transform: rotate(360deg);
+      }
+    }
+
+
+    /* =========================
+       PETITS ÉCRANS
+    ========================= */
+
+    @media (max-width: 360px) {
+
+      .app-icon {
+        width: 76px;
+        height: 76px;
+      }
+
+      .app-title {
+        font-size: 23px;
+      }
+
+      .quick-download-btn {
+        font-size: 15px;
+      }
+
+      .download-detail span {
+        font-size: 11px;
       }
 
     }
@@ -583,690 +630,51 @@
 
 <body>
 
-  <div class="app-container">
+<div class="app-container">
 
 
-    <!-- =========================
-         BARRE DU HAUT
-    ========================= -->
+  <!-- =========================
+       BARRE DU HAUT
+  ========================= -->
 
-    <div class="top-bar">
+  <div class="top-bar">
+
+    <button
+      class="icon-btn"
+      onclick="history.back()"
+      aria-label="Retour"
+    >
+      <span class="material-symbols-outlined">
+        arrow_back
+      </span>
+    </button>
+
+
+    <div class="top-bar-right">
 
       <button
         class="icon-btn"
-        onclick="history.back()"
-        aria-label="Retour"
+        onclick="ajouterFavori()"
+        aria-label="Ajouter aux favoris"
       >
-
-        <span class="material-symbols-outlined">
-          arrow_back
+        <span
+          class="material-symbols-outlined"
+          id="favoriteIcon"
+        >
+          bookmark_add
         </span>
-
       </button>
 
 
-      <div class="top-bar-right">
-
-        <button
-          class="icon-btn"
-          onclick="ajouterFavori()"
-          aria-label="Ajouter aux favoris"
-        >
-
-          <span
-            class="material-symbols-outlined"
-            id="favoriteIcon"
-          >
-            bookmark_add
-          </span>
-
-        </button>
-
-
-        <button
-          class="icon-btn"
-          onclick="partagerApplication()"
-          aria-label="Partager"
-        >
-
-          <span class="material-symbols-outlined">
-            share
-          </span>
-
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         APPLICATION
-    ========================= -->
-
-    <div class="app-header">
-
-      <img
-        src="https://i.postimg.cc/4x0bQw2H/1000282956.jpg"
-        alt="Logo ZTV Moyenne"
-        class="app-icon"
+      <button
+        class="icon-btn"
+        onclick="partagerApplication()"
+        aria-label="Partager"
       >
-
-
-      <div class="app-title-container">
-
-        <h1 class="app-title">
-          ZTV Moyenne
-        </h1>
-
-        <span class="app-developer">
-          ZTV (Zakaria Niampa)
-        </span>
-
-        <span class="app-version">
-          Version 1.0 • Gratuit
-        </span>
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         BADGES DE CONFIANCE
-    ========================= -->
-
-    <div class="trust-badges">
-
-      <div class="trust-badge">
-
         <span class="material-symbols-outlined">
-          download
+          share
         </span>
-
-        Téléchargement gratuit
-
-      </div>
-
-
-      <div class="trust-badge">
-
-        <span class="material-symbols-outlined">
-          wifi_off
-        </span>
-
-        Fonctionne hors connexion
-
-      </div>
-
-
-      <div class="trust-badge">
-
-        <span class="material-symbols-outlined">
-          android
-        </span>
-
-        Pour Android
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         STATISTIQUES
-    ========================= -->
-
-    <div class="stats-container">
-
-
-      <div class="stat-item">
-
-        <div class="stat-value">
-
-          4,8
-
-          <span
-            class="material-symbols-outlined"
-            style="font-size:14px;"
-          >
-            star
-          </span>
-
-        </div>
-
-        <div class="stat-label">
-          Avis
-        </div>
-
-      </div>
-
-
-      <div class="stat-divider"></div>
-
-
-      <div class="stat-item">
-
-        <div class="stat-value">
-
-          <span class="badge-age">
-            3+
-          </span>
-
-        </div>
-
-        <div class="stat-label">
-          Tout public
-        </div>
-
-      </div>
-
-
-      <div class="stat-divider"></div>
-
-
-      <div class="stat-item">
-
-        <div class="stat-value">
-
-          <span
-            class="material-symbols-outlined"
-            style="font-size:17px;"
-          >
-            android
-          </span>
-
-        </div>
-
-        <div class="stat-label">
-          Android
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         SURFACE DE TÉLÉCHARGEMENT
-    ========================= -->
-
-    <section class="download-card">
-
-
-      <div class="download-card-header">
-
-        <img
-          src="https://i.postimg.cc/4x0bQw2H/1000282956.jpg"
-          alt="ZTV Moyenne"
-          class="download-logo"
-        >
-
-
-        <div class="download-card-title">
-
-          <h2>
-            Télécharger ZTV Moyenne
-          </h2>
-
-          <p>
-            L'application éducative de ZTV
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- GRATUIT + HORS CONNEXION -->
-
-      <div class="free-offline-box">
-
-        <div class="free-offline-icon">
-
-          <span class="material-symbols-outlined">
-            check
-          </span>
-
-        </div>
-
-
-        <div class="free-offline-text">
-
-          <strong>
-            100 % gratuit et utilisable hors connexion
-          </strong>
-
-          <p>
-            ZTV Moyenne est proposée gratuitement.
-            Une fois l'application installée, ses fonctions
-            prévues pour fonctionner hors connexion peuvent
-            être utilisées sans connexion Internet.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- INFORMATIONS -->
-
-      <div class="download-details">
-
-
-        <div class="download-detail">
-
-          <span class="material-symbols-outlined">
-            verified
-          </span>
-
-          <div>
-
-            <strong>
-              Version
-            </strong>
-
-            <span>
-              1.0
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div class="download-detail">
-
-          <span class="material-symbols-outlined">
-            android
-          </span>
-
-          <div>
-
-            <strong>
-              Système
-            </strong>
-
-            <span>
-              Android
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div class="download-detail">
-
-          <span class="material-symbols-outlined">
-            payments
-          </span>
-
-          <div>
-
-            <strong>
-              Prix
-            </strong>
-
-            <span>
-              Gratuit
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- BOUTON -->
-
-      <a
-        id="downloadButton"
-        href="app-debug.apk"
-        download
-        class="install-btn"
-        onclick="demarrerTelechargement(event)"
-      >
-
-        <span
-          class="material-symbols-outlined"
-          id="downloadIcon"
-        >
-          download
-        </span>
-
-
-        <span
-          class="material-symbols-outlined loading-icon"
-          id="loadingIcon"
-        >
-          progress_activity
-        </span>
-
-
-        <span id="downloadText">
-          Télécharger gratuitement
-        </span>
-
-      </a>
-
-
-      <div
-        class="download-status"
-        id="downloadStatus"
-      >
-        Le téléchargement va commencer…
-      </div>
-
-
-      <!-- GUIDE -->
-
-      <div class="install-info">
-
-        <div class="install-info-title">
-
-          <span class="material-symbols-outlined">
-            info
-          </span>
-
-          Installation en quelques secondes
-
-        </div>
-
-
-        <ol>
-
-          <li>
-            Appuie sur
-            <strong>« Télécharger gratuitement »</strong>.
-          </li>
-
-          <li>
-            Attends la fin du téléchargement.
-          </li>
-
-          <li>
-            Ouvre le fichier APK téléchargé.
-          </li>
-
-          <li>
-            Appuie sur
-            <strong>« Installer »</strong>.
-          </li>
-
-        </ol>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         CAPTURES
-    ========================= -->
-
-    <div class="section-label">
-      Découvrez l'application
-    </div>
-
-
-    <div class="screenshots-container">
-
-
-      <img
-        src="https://i.postimg.cc/cJ5jYQwz/Screenshot-20260812-215631.jpg"
-        alt="Capture d'écran ZTV Moyenne 1"
-        class="screenshot-placeholder"
-      >
-
-
-      <img
-        src="https://i.postimg.cc/br1FKWWj/Screenshot-20260812-215642.jpg"
-        alt="Capture d'écran ZTV Moyenne 2"
-        class="screenshot-placeholder"
-      >
-
-
-      <img
-        src="https://i.postimg.cc/T3dH4kcJ/Screenshot-20260813-013552.jpg"
-        alt="Capture d'écran ZTV Moyenne 3"
-        class="screenshot-placeholder"
-      >
-
-
-      <img
-        src="https://i.postimg.cc/kGPTFw4F/Screenshot-20260813-013510.jpg"
-        alt="Capture d'écran ZTV Moyenne 4"
-        class="screenshot-placeholder"
-      >
-
-
-      <img
-        src="https://i.postimg.cc/tCyrsrwS/Screenshot-20260813-013506.jpg"
-        alt="Capture d'écran ZTV Moyenne 5"
-        class="screenshot-placeholder"
-      >
-
-    </div>
-
-
-    <!-- =========================
-         À PROPOS
-    ========================= -->
-
-    <div class="section-about">
-
-
-      <div class="section-header">
-
-        <h2 class="section-title">
-          À propos de l'appli
-        </h2>
-
-
-        <button
-          class="arrow-btn"
-          onclick="afficherPlus()"
-          aria-label="En savoir plus"
-        >
-
-          <span class="material-symbols-outlined">
-            arrow_forward
-          </span>
-
-        </button>
-
-      </div>
-
-
-      <p class="about-description">
-
-        <strong>ZTV Moyenne</strong> est une application éducative
-        conçue pour aider les élèves à calculer, suivre et améliorer
-        leurs résultats scolaires.
-
-        <br><br>
-
-        Elle permet de calculer rapidement les moyennes du
-        <strong>1er, 2e et 3e trimestre</strong>, puis d'obtenir
-        automatiquement la moyenne générale annuelle, la mention
-        et la décision de passage en classe supérieure.
-
-        <br><br>
-
-        Pour les élèves de <strong>3e</strong>, ZTV Moyenne propose
-        également un calculateur d'orientation spécial permettant
-        d'estimer la moyenne d'orientation en tenant compte des
-        résultats scolaires et des notes du BEPC.
-
-        <br><br>
-
-        Les élèves peuvent également suivre leur progression tout
-        au long de l'année et vérifier leur éligibilité au
-        <strong>Tableau d'Honneur ZTV Excellence</strong>.
-
-        <br><br>
-
-        Avec son espace personnel, chaque élève peut conserver ses
-        informations et suivre ses performances scolaires.
-
-        <br><br>
-
-        <strong>
-          ZTV Moyenne — Ton assistant intelligent pour calculer,
-          suivre et réussir ton année scolaire !
-        </strong>
-
-      </p>
-
-    </div>
-
-
-    <!-- =========================
-         FONCTIONNALITÉS
-    ========================= -->
-
-    <div class="features">
-
-      <h2 class="features-title">
-        Fonctionnalités
-      </h2>
-
-
-      <div class="feature">
-
-        <span class="material-symbols-outlined feature-icon">
-          calculate
-        </span>
-
-        <div class="feature-text">
-
-          <strong>
-            Calcul instantané des moyennes
-          </strong>
-
-          <br>
-
-          Calcule facilement tes moyennes trimestrielles
-          et ta moyenne annuelle.
-
-        </div>
-
-      </div>
-
-
-      <div class="feature">
-
-        <span class="material-symbols-outlined feature-icon">
-          school
-        </span>
-
-        <div class="feature-text">
-
-          <strong>
-            Orientation spéciale 3e
-          </strong>
-
-          <br>
-
-          Calcule ta moyenne d'orientation et prépare
-          ton parcours après le BEPC.
-
-        </div>
-
-      </div>
-
-
-      <div class="feature">
-
-        <span class="material-symbols-outlined feature-icon">
-          emoji_events
-        </span>
-
-        <div class="feature-text">
-
-          <strong>
-            Tableau d'Honneur ZTV Excellence
-          </strong>
-
-          <br>
-
-          Vérifie ton éligibilité à partir d'une moyenne
-          annuelle de 13/20.
-
-        </div>
-
-      </div>
-
-
-      <div class="feature">
-
-        <span class="material-symbols-outlined feature-icon">
-          trending_up
-        </span>
-
-        <div class="feature-text">
-
-          <strong>
-            Suivi de progression
-          </strong>
-
-          <br>
-
-          Suis tes performances et découvre des conseils
-          pour progresser.
-
-        </div>
-
-      </div>
-
-
-      <div class="feature">
-
-        <span class="material-symbols-outlined feature-icon">
-          account_circle
-        </span>
-
-        <div class="feature-text">
-
-          <strong>
-            Espace personnel
-          </strong>
-
-          <br>
-
-          Retrouve tes informations scolaires dans ton
-          compte personnel.
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         PIED DE PAGE
-    ========================= -->
-
-    <div class="footer">
-
-      <strong>
-        ZTV Moyenne
-      </strong>
-
-      <br>
-
-      Application développée par ZTV (Zakaria Niampa)
-
-      <br><br>
-
-      Application gratuite • Android
-
-      <br>
-
-      © 2026 ZTV — Tous droits réservés.
+      </button>
 
     </div>
 
@@ -1274,224 +682,888 @@
 
 
   <!-- =========================
-       JAVASCRIPT
+       APPLICATION
   ========================= -->
 
-  <script>
+  <div class="app-header">
 
-    /*
-      =====================================================
-      FICHIER APK
-      =====================================================
-
-      Le fichier doit être placé au même endroit
-      que cette page HTML.
-
-      Nom actuel :
-      app-debug.apk
-
-      Si le nom change, modifie cette ligne.
-    */
-
-    const APK_URL = "app-debug.apk";
+    <img
+      src="https://i.postimg.cc/4x0bQw2H/1000282956.jpg"
+      alt="Logo ZTV Moyenne"
+      class="app-icon"
+    >
 
 
-    /* =========================
-       TÉLÉCHARGEMENT
-    ========================= */
+    <div class="app-title-container">
 
-    function demarrerTelechargement(event) {
+      <h1 class="app-title">
+        ZTV Moyenne
+      </h1>
 
-      const text =
-        document.getElementById("downloadText");
+      <span class="app-developer">
+        ZTV (Zakaria Niampa)
+      </span>
 
-      const downloadIcon =
-        document.getElementById("downloadIcon");
+      <span class="app-version">
+        Version 1.0 • Gratuit
+      </span>
 
-      const loadingIcon =
-        document.getElementById("loadingIcon");
+    </div>
 
-      const status =
-        document.getElementById("downloadStatus");
+  </div>
 
 
-      downloadIcon.style.display = "none";
+  <!-- =========================
+       TÉLÉCHARGEMENT IMMÉDIAT
+  ========================= -->
 
-      loadingIcon.style.display = "inline-block";
+  <div class="quick-download">
+
+    <a
+      id="quickDownloadButton"
+      href="app-debug.apk"
+      download
+      class="quick-download-btn"
+      onclick="demarrerTelechargementRapide(event)"
+    >
+
+      <span
+        class="material-symbols-outlined"
+        id="quickDownloadIcon"
+      >
+        download
+      </span>
+
+      <span
+        class="material-symbols-outlined loading-icon"
+        id="quickLoadingIcon"
+      >
+        progress_activity
+      </span>
+
+      <span id="quickDownloadText">
+        Télécharger gratuitement
+      </span>
+
+    </a>
+
+
+    <div class="quick-download-info">
+
+      <span>
+        <span class="material-symbols-outlined">
+          wifi_off
+        </span>
+        Hors connexion
+      </span>
+
+      <span>
+        <span class="material-symbols-outlined">
+          android
+        </span>
+        Android
+      </span>
+
+      <span>
+        Gratuit
+      </span>
+
+    </div>
+
+
+    <div
+      class="download-status"
+      id="quickDownloadStatus"
+    >
+      Le téléchargement va commencer…
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       BADGES DE CONFIANCE
+  ========================= -->
+
+  <div class="trust-badges">
+
+    <div class="trust-badge">
+
+      <span class="material-symbols-outlined">
+        download
+      </span>
+
+      Téléchargement gratuit
+
+    </div>
+
+
+    <div class="trust-badge">
+
+      <span class="material-symbols-outlined">
+        wifi_off
+      </span>
+
+      Fonctionne hors connexion
+
+    </div>
+
+
+    <div class="trust-badge">
+
+      <span class="material-symbols-outlined">
+        android
+      </span>
+
+      Pour Android
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       STATISTIQUES
+  ========================= -->
+
+  <div class="stats-container">
+
+    <div class="stat-item">
+
+      <div class="stat-value">
+
+        4,8
+
+        <span
+          class="material-symbols-outlined"
+          style="font-size:14px;"
+        >
+          star
+        </span>
+
+      </div>
+
+      <div class="stat-label">
+        Avis
+      </div>
+
+    </div>
+
+
+    <div class="stat-divider"></div>
+
+
+    <div class="stat-item">
+
+      <div class="stat-value">
+
+        <span class="badge-age">
+          3+
+        </span>
+
+      </div>
+
+      <div class="stat-label">
+        Tout public
+      </div>
+
+    </div>
+
+
+    <div class="stat-divider"></div>
+
+
+    <div class="stat-item">
+
+      <div class="stat-value">
+
+        <span
+          class="material-symbols-outlined"
+          style="font-size:17px;"
+        >
+          android
+        </span>
+
+      </div>
+
+      <div class="stat-label">
+        Android
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       INFORMATIONS DE TÉLÉCHARGEMENT
+  ========================= -->
+
+  <section class="download-card">
+
+    <div class="download-card-header">
+
+      <img
+        src="https://i.postimg.cc/4x0bQw2H/1000282956.jpg"
+        alt="ZTV Moyenne"
+        class="download-logo"
+      >
+
+
+      <div class="download-card-title">
+
+        <h2>
+          À propos du téléchargement
+        </h2>
+
+        <p>
+          Tout ce qu'il faut savoir avant l'installation
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         GRATUIT + HORS CONNEXION
+    ========================= -->
+
+    <div class="free-offline-box">
+
+      <div class="free-offline-icon">
+
+        <span class="material-symbols-outlined">
+          check
+        </span>
+
+      </div>
+
+
+      <div class="free-offline-text">
+
+        <strong>
+          100 % gratuit et utilisable hors connexion
+        </strong>
+
+        <p>
+          ZTV Moyenne est proposée gratuitement.
+          Une fois l'application installée, ses fonctions
+          prévues pour fonctionner hors connexion peuvent
+          être utilisées sans connexion Internet.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         INFORMATIONS APK
+    ========================= -->
+
+    <div class="download-details">
+
+
+      <div class="download-detail">
+
+        <span class="material-symbols-outlined">
+          verified
+        </span>
+
+        <div>
+
+          <strong>
+            Version
+          </strong>
+
+          <span>
+            1.0
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="download-detail">
+
+        <span class="material-symbols-outlined">
+          android
+        </span>
+
+        <div>
+
+          <strong>
+            Système
+          </strong>
+
+          <span>
+            Android
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="download-detail">
+
+        <span class="material-symbols-outlined">
+          payments
+        </span>
+
+        <div>
+
+          <strong>
+            Prix
+          </strong>
+
+          <span>
+            Gratuit
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         GUIDE D'INSTALLATION
+    ========================= -->
+
+    <div class="install-info">
+
+      <div class="install-info-title">
+
+        <span class="material-symbols-outlined">
+          info
+        </span>
+
+        Installation en quelques secondes
+
+      </div>
+
+
+      <ol>
+
+        <li>
+          Appuie sur
+          <strong>« Télécharger gratuitement »</strong>.
+        </li>
+
+        <li>
+          Attends la fin du téléchargement.
+        </li>
+
+        <li>
+          Ouvre le fichier APK téléchargé.
+        </li>
+
+        <li>
+          Appuie sur
+          <strong>« Installer »</strong>.
+        </li>
+
+      </ol>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CAPTURES D'ÉCRAN
+  ========================= -->
+
+  <div class="section-label">
+    Découvrez l'application
+  </div>
+
+
+  <div class="screenshots-container">
+
+
+    <img
+      src="https://i.postimg.cc/cJ5jYQwz/Screenshot-20260812-215631.jpg"
+      alt="Capture d'écran ZTV Moyenne 1"
+      class="screenshot-placeholder"
+    >
+
+
+    <img
+      src="https://i.postimg.cc/br1FKWWj/Screenshot-20260812-215642.jpg"
+      alt="Capture d'écran ZTV Moyenne 2"
+      class="screenshot-placeholder"
+    >
+
+
+    <img
+      src="https://i.postimg.cc/T3dH4kcJ/Screenshot-20260813-013552.jpg"
+      alt="Capture d'écran ZTV Moyenne 3"
+      class="screenshot-placeholder"
+    >
+
+
+    <img
+      src="https://i.postimg.cc/kGPTFw4F/Screenshot-20260812-013510.jpg"
+      alt="Capture d'écran ZTV Moyenne 4"
+      class="screenshot-placeholder"
+    >
+
+
+    <img
+      src="https://i.postimg.cc/tCyrsrwS/Screenshot-20260813-013506.jpg"
+      alt="Capture d'écran ZTV Moyenne 5"
+      class="screenshot-placeholder"
+    >
+
+  </div>
+
+
+  <!-- =========================
+       À PROPOS
+  ========================= -->
+
+  <div class="section-about">
+
+    <div class="section-header">
+
+      <h2 class="section-title">
+        À propos de l'appli
+      </h2>
+
+
+      <button
+        class="arrow-btn"
+        onclick="afficherPlus()"
+        aria-label="En savoir plus"
+      >
+
+        <span class="material-symbols-outlined">
+          arrow_forward
+        </span>
+
+      </button>
+
+    </div>
+
+
+    <p class="about-description">
+
+      <strong>ZTV Moyenne</strong> est une application éducative
+      conçue pour aider les élèves à calculer, suivre et améliorer
+      leurs résultats scolaires.
+
+      <br><br>
+
+      Elle permet de calculer rapidement les moyennes du
+      <strong>1er, 2e et 3e trimestre</strong>, puis d'obtenir
+      automatiquement la moyenne générale annuelle, la mention
+      et la décision de passage en classe supérieure.
+
+      <br><br>
+
+      Pour les élèves de <strong>3e</strong>, ZTV Moyenne propose
+      également un calculateur d'orientation spécial permettant
+      d'estimer la moyenne d'orientation en tenant compte des
+      résultats scolaires et des notes du BEPC.
+
+      <br><br>
+
+      Les élèves peuvent également suivre leur progression tout
+      au long de l'année et vérifier leur éligibilité au
+      <strong>Tableau d'Honneur ZTV Excellence</strong>.
+
+      <br><br>
+
+      Avec son espace personnel, chaque élève peut conserver ses
+      informations et suivre ses performances scolaires.
+
+      <br><br>
+
+      <strong>
+        ZTV Moyenne — Ton assistant intelligent pour calculer,
+        suivre et réussir ton année scolaire !
+      </strong>
+
+    </p>
+
+  </div>
+
+
+  <!-- =========================
+       FONCTIONNALITÉS
+  ========================= -->
+
+  <div class="features">
+
+    <h2 class="features-title">
+      Fonctionnalités
+    </h2>
+
+
+    <div class="feature">
+
+      <span class="material-symbols-outlined feature-icon">
+        calculate
+      </span>
+
+      <div class="feature-text">
+
+        <strong>
+          Calcul instantané des moyennes
+        </strong>
+
+        <br>
+
+        Calcule facilement tes moyennes trimestrielles
+        et ta moyenne annuelle.
+
+      </div>
+
+    </div>
+
+
+    <div class="feature">
+
+      <span class="material-symbols-outlined feature-icon">
+        school
+      </span>
+
+      <div class="feature-text">
+
+        <strong>
+          Orientation spéciale 3e
+        </strong>
+
+        <br>
+
+        Calcule ta moyenne d'orientation et prépare
+        ton parcours après le BEPC.
+
+      </div>
+
+    </div>
+
+
+    <div class="feature">
+
+      <span class="material-symbols-outlined feature-icon">
+        emoji_events
+      </span>
+
+      <div class="feature-text">
+
+        <strong>
+          Tableau d'Honneur ZTV Excellence
+        </strong>
+
+        <br>
+
+        Vérifie ton éligibilité à partir d'une moyenne
+        annuelle de 13/20.
+
+      </div>
+
+    </div>
+
+
+    <div class="feature">
+
+      <span class="material-symbols-outlined feature-icon">
+        trending_up
+      </span>
+
+      <div class="feature-text">
+
+        <strong>
+          Suivi de progression
+        </strong>
+
+        <br>
+
+        Suis tes performances et découvre des conseils
+        pour progresser.
+
+      </div>
+
+    </div>
+
+
+    <div class="feature">
+
+      <span class="material-symbols-outlined feature-icon">
+        account_circle
+      </span>
+
+      <div class="feature-text">
+
+        <strong>
+          Espace personnel
+        </strong>
+
+        <br>
+
+        Retrouve tes informations scolaires dans ton
+        compte personnel.
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       PIED DE PAGE
+  ========================= -->
+
+  <div class="footer">
+
+    <strong>
+      ZTV Moyenne
+    </strong>
+
+    <br>
+
+    Application développée par ZTV (Zakaria Niampa)
+
+    <br><br>
+
+    Application gratuite • Android
+
+    <br>
+
+    © 2026 ZTV — Tous droits réservés.
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+  /* =========================
+     FICHIER APK
+  ========================= */
+
+  const APK_URL = "app-debug.apk";
+
+
+  /* =========================
+     TÉLÉCHARGEMENT RAPIDE
+  ========================= */
+
+  function demarrerTelechargementRapide(event) {
+
+    const bouton =
+      document.getElementById("quickDownloadButton");
+
+    const icon =
+      document.getElementById("quickDownloadIcon");
+
+    const loading =
+      document.getElementById("quickLoadingIcon");
+
+    const text =
+      document.getElementById("quickDownloadText");
+
+    const status =
+      document.getElementById("quickDownloadStatus");
+
+
+    icon.style.display = "none";
+
+    loading.style.display = "inline-block";
+
+    text.textContent =
+      "Téléchargement…";
+
+    status.style.display =
+      "block";
+
+    status.textContent =
+      "Le téléchargement de ZTV Moyenne commence…";
+
+
+    setTimeout(function() {
+
+      icon.style.display =
+        "inline-block";
+
+      loading.style.display =
+        "none";
 
       text.textContent =
-        "Téléchargement…";
-
-      status.style.display =
-        "block";
+        "Télécharger gratuitement";
 
       status.textContent =
-        "Le téléchargement de ZTV Moyenne commence…";
+        "Après le téléchargement, ouvre le fichier APK pour commencer l'installation.";
+
+    }, 2500);
+
+  }
 
 
-      setTimeout(function() {
+  /* =========================
+     FAVORIS
+  ========================= */
 
-        downloadIcon.style.display =
-          "inline-block";
+  function ajouterFavori() {
 
-        loadingIcon.style.display =
-          "none";
+    const icon =
+      document.getElementById("favoriteIcon");
 
-        text.textContent =
-          "Télécharger gratuitement";
 
-        status.textContent =
-          "Après le téléchargement, ouvre le fichier APK pour commencer l'installation.";
+    if (
+      icon.textContent.trim() ===
+      "bookmark_add"
+    ) {
 
-      }, 2500);
+      icon.textContent =
+        "bookmark";
+
+      try {
+
+        localStorage.setItem(
+          "ztv_favori",
+          "true"
+        );
+
+      } catch (e) {}
+
+    } else {
+
+      icon.textContent =
+        "bookmark_add";
+
+      try {
+
+        localStorage.removeItem(
+          "ztv_favori"
+        );
+
+      } catch (e) {}
 
     }
 
-
-    /* =========================
-       FAVORIS
-    ========================= */
-
-    function ajouterFavori() {
-
-      const icon =
-        document.getElementById("favoriteIcon");
+  }
 
 
-      if (icon.textContent.trim() === "bookmark_add") {
+  /* =========================
+     RESTAURER FAVORI
+  ========================= */
 
-        icon.textContent =
-          "bookmark";
+  window.addEventListener(
+    "DOMContentLoaded",
+    function() {
 
-        try {
+      try {
 
-          localStorage.setItem(
-            "ztv_favori",
-            "true"
-          );
-
-        } catch (e) {}
-
-      } else {
-
-        icon.textContent =
-          "bookmark_add";
-
-        try {
-
-          localStorage.removeItem(
+        const favori =
+          localStorage.getItem(
             "ztv_favori"
           );
 
-        } catch (e) {}
+
+        if (favori === "true") {
+
+          document.getElementById(
+            "favoriteIcon"
+          ).textContent =
+            "bookmark";
+
+        }
+
+      } catch (e) {}
+
+    }
+  );
+
+
+  /* =========================
+     PARTAGE
+  ========================= */
+
+  async function partagerApplication() {
+
+    const partage = {
+
+      title:
+        "ZTV Moyenne",
+
+      text:
+        "Télécharge gratuitement ZTV Moyenne, ton assistant pour calculer et suivre tes résultats scolaires.",
+
+      url:
+        window.location.href
+
+    };
+
+
+    if (navigator.share) {
+
+      try {
+
+        await navigator.share(
+          partage
+        );
+
+      } catch (e) {
+
+        console.log(
+          "Partage annulé."
+        );
+
+      }
+
+    } else {
+
+      try {
+
+        await navigator.clipboard.writeText(
+          window.location.href
+        );
+
+        alert(
+          "Le lien de ZTV Moyenne a été copié. Tu peux maintenant le partager."
+        );
+
+      } catch (e) {
+
+        alert(
+          "Lien de ZTV Moyenne : " +
+          window.location.href
+        );
 
       }
 
     }
 
-
-    /* =========================
-       RESTAURER FAVORI
-    ========================= */
-
-    window.addEventListener(
-      "DOMContentLoaded",
-      function() {
-
-        try {
-
-          const favori =
-            localStorage.getItem("ztv_favori");
+  }
 
 
-          if (favori === "true") {
+  /* =========================
+     À PROPOS
+  ========================= */
 
-            document.getElementById(
-              "favoriteIcon"
-            ).textContent = "bookmark";
+  function afficherPlus() {
 
-          }
-
-        } catch (e) {}
-
-      }
+    alert(
+      "ZTV Moyenne est une application éducative conçue pour aider les élèves à calculer, suivre et améliorer leurs résultats scolaires."
     );
 
+  }
 
-    /* =========================
-       PARTAGE
-    ========================= */
-
-    async function partagerApplication() {
-
-      const partage = {
-
-        title: "ZTV Moyenne",
-
-        text:
-          "Télécharge gratuitement ZTV Moyenne, ton assistant pour calculer et suivre tes résultats scolaires.",
-
-        url:
-          window.location.href
-
-      };
-
-
-      if (navigator.share) {
-
-        try {
-
-          await navigator.share(
-            partage
-          );
-
-        } catch (e) {
-
-          console.log(
-            "Partage annulé."
-          );
-
-        }
-
-      } else {
-
-        try {
-
-          await navigator.clipboard.writeText(
-            window.location.href
-          );
-
-          alert(
-            "Le lien de ZTV Moyenne a été copié. Tu peux maintenant le partager."
-          );
-
-        } catch (e) {
-
-          alert(
-            "Lien de ZTV Moyenne : " +
-            window.location.href
-          );
-
-        }
-
-      }
-
-    }
-
-
-    /* =========================
-       À PROPOS
-    ========================= */
-
-    function afficherPlus() {
-
-      alert(
-        "ZTV Moyenne est une application éducative conçue pour aider les élèves à calculer, suivre et améliorer leurs résultats scolaires."
-      );
-
-    }
-
-  </script>
+</script>
 
 </body>
 </html>
